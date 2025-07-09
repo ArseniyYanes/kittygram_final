@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = bool(strtobool(os.getenv("DEBUG", "True")))
+DEBUG = bool(strtobool(os.getenv("DEBUG", "False")))
 
 ALLOWED_HOSTS = ['158.160.31.225', 'localhost', '127.0.0.1', 'kittygramserver.duckdns.org']
 
