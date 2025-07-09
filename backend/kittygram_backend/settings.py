@@ -1,12 +1,13 @@
 # flake8: noqa
 import os
 from pathlib import Path
+from distutils.util import strtobool
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-cg6*%6d51ef8f#4!r3*$vmxm4)abgjw8mo!4y-q*uq1!4$-89$'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = True
+DEBUG = bool(strtobool(os.getenv("DEBUG", "True")))
 
 ALLOWED_HOSTS = ['158.160.31.225', 'localhost', '127.0.0.1', 'kittygramserver.duckdns.org']
 
